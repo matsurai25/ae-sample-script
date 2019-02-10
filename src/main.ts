@@ -1,7 +1,16 @@
 /// <reference types="types-for-adobe/aftereffects/2018"/>
 
-const a = [1,2,3]
-for (let index = 0; index < a.length; index++) {
-  const element = a[index];
-  $.writeln(element)
-}
+(function(){
+  var AC = app.project.activeItem;
+  if (AC instanceof CompItem) {
+  } else {
+    alert("No comp is selected.");
+    return false;
+  };
+
+  var AL = AC.selectedLayers;
+  for (let i = 0; i < AL.length; i++) {
+    const layerF = AL[i];
+    $.writeln(layerF.name)
+  }
+})();

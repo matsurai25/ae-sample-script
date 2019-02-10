@@ -5,16 +5,18 @@
   "main": "index.js",
   "devDependencies": {
     "ts-loader": "^5.3.3",
+    "types-for-adobe": "^1.4.1",
     "typescript": "^3.3.3",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "ajv": "^6.8.1",
-    "types-for-adobe": "^1.4.1"
+    "webpack-cli": "^3.2.3"
   },
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack -w"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.8.1"
+  }
 }
