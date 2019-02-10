@@ -1,16 +1,15 @@
 /// <reference types="types-for-adobe/aftereffects/2018"/>
 
 (function(){
-  var AC = app.project.activeItem;
-  if (AC instanceof CompItem) {
-  } else {
-    alert("No comp is selected.");
-    return false;
+  var activeItem = app.project.activeItem;
+  if ( !(activeItem instanceof CompItem) ) {
+    alert('No comp is selected.');
+    return;
   };
 
-  var AL = AC.selectedLayers;
-  for (let i = 0; i < AL.length; i++) {
-    const layerF = AL[i];
-    $.writeln(layerF.name)
+  var activeLayers = activeItem.selectedLayers;
+  for (let i = 0; i < activeLayers.length; i++) {
+    const layer = activeLayers[i];
+    $.writeln(layer.name)
   }
 })();
