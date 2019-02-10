@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"target": "ES3",
+		"module": "es2015",
+		"noLib": true
+	}
+}
